@@ -6,8 +6,9 @@
    --background-color: #F2F2F2;
 
    /* SHADOWS */
-   --input-shadow: box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
-   --card-shadow: box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+   --navbar-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+   --input-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+   --card-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
 }
 
 body {
@@ -15,4 +16,152 @@ body {
    font-weight: 300;
    font-size: 14px;
    line-height: 16px;
+   
+   color: var(--text-color);
+   background-color: var(--background-color);
 }
+
+/* GLOBAL */ 
+.container {
+   padding: 0 20px;
+   margin: 0 60px;
+   margin: 0 auto;
+   max-width: 1440px;
+}
+
+.card-container {
+   padding: 0 0 34px 24px;
+}
+
+a {
+   text-decoration: none;
+   color: var(--text-color);
+}
+
+/* NAVBAR */
+.nav {
+   margin-bottom: 48px;
+
+   background-color: var(--accent-color);
+   box-shadow: var(--navbar-shadow);
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title {
+   margin: 0;
+
+   font-weight: 800;
+   font-size: 24px;
+   line-height: 33px;
+}
+
+.btn {
+   margin: 29px 0;
+
+   background-color: transparent;
+   border: none;
+
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 22px;
+}
+
+.btn img {
+   position: relative;
+   padding-right: 8px;
+   top: 3px;
+}
+
+/* FEATURES */
+
+.features-section {
+   margin-bottom: 48px;
+}
+
+.features {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+input[type="search"] {
+   padding: 18px 10px 18px 74px;
+   width: 402px;
+
+   border: none;
+   border-radius: 5px;
+   box-shadow: var(--input-shadow);
+   background-image: url("/img/search.png");
+   background-repeat: no-repeat;
+   background-position: 32px center;
+}
+
+select {
+   width: 200px;
+   padding: 18px 22px 18px 24px;
+   -moz-appearance: none;
+	-webkit-appearance: none;
+   background: url("/img/arrow.png") var(--accent-color) no-repeat 166px center;
+   border: none;
+   border-radius: 5px;
+   box-shadow: var(--input-shadow);
+}
+
+input:focus,
+select:focus,
+button {
+   outline: none;
+}
+
+/* CARDS */
+
+main {
+   margin-bottom: 46px;
+}
+ 
+.cards {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 75px;
+}
+
+.card {
+   width: 300px;
+
+   background: var(--accent-color);
+   box-shadow: var(--card-shadow);
+   border-radius: 5px;
+}
+
+.card__image {
+   max-width: 100%;
+   height: auto;
+
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+
+.country-name {
+   margin-top: 24px;
+   margin-bottom: 16px;
+   font-weight: 800;
+   font-size: 18px;
+   line-height: 26px;
+}
+
+span {
+   font-weight: 600;
+}
+
+.population, 
+.region,
+.capital {
+   margin-top: 0;
+   margin-bottom: 8px;
+}
+
