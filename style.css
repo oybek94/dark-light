@@ -1,0 +1,18 @@
+:root {
+   /* COLORS */
+   --text-color: #111517;
+   --search-color: #848484; 
+   --accent-color: #ffffff;
+   --background-color: #F2F2F2;
+
+   /* SHADOWS */
+   --input-shadow: box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+   --card-shadow: box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+}
+
+body {
+   font-family: 'Nunito Sans', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 16px;
+}
