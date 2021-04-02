@@ -1,7 +1,7 @@
 :root {
    /* COLORS */
    --text-color: #111517;
-   --search-color: #848484; 
+   --search-color: #848484;
    --accent-color: #ffffff;
    --background-color: #F2F2F2;
 
@@ -14,10 +14,10 @@
 .dark-theme {
    /* COLORS */
    --text-color: #ffffff;
-   --search-color: #2B3844; 
+   --search-color: #2B3844;
    --accent-color: #2B3844;
    --background-color: #202C36;
-   
+
    /* SHADOWS */
    --navbar-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
    --input-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
@@ -29,12 +29,12 @@ body {
    font-weight: 300;
    font-size: 14px;
    line-height: 16px;
-   
+
    color: var(--text-color);
    background-color: var(--background-color);
 }
 
-/* GLOBAL */ 
+/* GLOBAL */
 .container {
    padding: 0 20px;
    margin: 0 60px;
@@ -74,6 +74,7 @@ a {
 }
 
 .btn {
+   position: relative;
    margin: 29px 0;
 
    background-color: transparent;
@@ -85,9 +86,13 @@ a {
    line-height: 22px;
 }
 
-.btn img {
-   position: relative;
-   padding-right: 8px;
+.btn::before {
+   content: "";
+   position: absolute;
+   background: url("/img/Path.png") no-repeat center center;
+   width: 18px;
+   height: 17px;
+   left: -20px;
    top: 3px;
 }
 
@@ -124,7 +129,7 @@ select {
    width: 200px;
    padding: 18px 22px 18px 24px;
    -moz-appearance: none;
-	-webkit-appearance: none;
+   -webkit-appearance: none;
    background: url("/img/arrow.png") var(--accent-color) no-repeat 166px center;
    border: none;
    border-radius: 5px;
@@ -143,7 +148,7 @@ button {
 main {
    margin-bottom: 46px;
 }
- 
+
 .cards {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -178,10 +183,9 @@ span {
    font-weight: 600;
 }
 
-.population, 
+.population,
 .region,
 .capital {
    margin-top: 0;
    margin-bottom: 8px;
 }
-
