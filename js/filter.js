@@ -1,19 +1,16 @@
 // Initiate Muuri Grid
 const grid = new Muuri('.grid');
+console.log("hello")
 
 // Hold our selected filters
 let filteredCategories = [];
-let filteredTypes = [];
 
 // Get All Filterable values
 const categoryFilter = document.getElementById('category-filter');
-const typeFilter = document.getElementById('type-filter');
 const allCategories = Array.from(categoryFilter.querySelectorAll('option'));
-const allTypes = Array.from(typeFilter.querySelectorAll('option'));
 
 // Set Defaults
 let selectedCategory = categoryFilter.value;
-let selectedType = typeFilter.value;
 
 
 // Events ------------------------------------------------------
@@ -32,11 +29,9 @@ function filterGrid() {
 	
 	// Get latest select values
 	selectedCategory = categoryFilter.value;
-	selectedType = typeFilter.value;
 	
-	// Reset filtered categories & types
+	// Reset filtered categories 
 	filteredCategories.splice(0,filteredCategories.length);
-	filteredTypes.splice(0,filteredTypes.length);
 	
 	// Categories
 	if( selectedCategory == 'all' ) {
@@ -49,16 +44,6 @@ function filterGrid() {
 	}
 	console.table(filteredCategories);
 	
-	// Types
-	if( selectedType == 'all' ) {
-		 allTypes.forEach(function(item) {
-			 // exlude the actual 'all' value
-			( item.value !="all" ? filteredTypes.push(item.value) : '' );
-		});
-	} else {
-		filteredTypes.push(typeFilter.value);
-	}
-	console.table(filteredTypes);
 	
 	// Filter the grid
 	// For each item in the grid array (which corresponds to a gallery item), check if the data-categories and data-types value match any of the values in the select field. If they do, return true
