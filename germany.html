@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <!-- FONTS -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+   <!-- links -->
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <nav class="nav">
+      <div class="container">
+         <div class="navbar">
+            <h2 class="title">Where in the world?</h2>
+            <button type="button" onClick="changeTheme()" class="btn"><span id="theme-mode" class="theme-mode">Dark
+                  Mode</span></button>
+         </div>
+      </div>
+   </nav>
+
+   <main>
+      <div class="back">
+         <div class="container">
+            <a class="back-link" href="/index.html"><img src="/img/back.png" alt="back" width="20" height="20">Back</a>
+         </div>
+      </div>
+
+      <div class="about">
+         <div class="container d-f">
+            <img class="flag" src="/img/belgium.png" alt="belgium" width="560" height="400">
+            <div class="country">
+               <h2 class="country__title">Belgium</h2>
+               <div class="country__info">
+                  <div class="country__info-left">
+                     <p class="native"><span>Native Name:</span> Belgie</p>
+                     <p class="population"><span>Population:</span> 11,319,511</p>
+                     <p class="region"><span>Region:</span> Europe</p>
+                     <p class="sub-region"><span>Sub Region:</span> Western Europe</p>
+                     <p class="capital"><span>Capital:</span> Brussels</p>
+                  </div>
+                  <div class="country__info-right">
+                     <p class="domain"><span>Top Level Domain:</span> be</p>
+                     <p class="current"><span>Currencies:</span> Euro</p>
+                     <p class="language"><span>Languages:</span> Dutch, French, German</p>
+                  </div>
+               </div>
+               <div class="border">
+                  <span class="border-countries">Border Countries:</span>
+                  <a class="border-country" href="#">France</a>
+                  <a class="border-country" href="#">Germany</a>
+                  <a class="border-country" href="#">Netherlands</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>
