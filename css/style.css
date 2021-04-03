@@ -25,6 +25,16 @@
    --borders-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
 }
 
+html {
+   box-sizing: border-box;
+ }
+ 
+ *,
+ *::after,
+ *::before {
+   box-sizing: inherit;
+ }
+ 
 body {
    font-family: 'Nunito Sans', sans-serif;
    font-weight: 300;
@@ -37,10 +47,11 @@ body {
 
 /* GLOBAL */
 .container {
-   padding: 0 20px;
-   margin: 0 60px;
-   margin: 0 auto;
-   max-width: 1440px;
+   max-width: 1311px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .card-container {
@@ -167,8 +178,6 @@ main {
 }
 
 .card {
-   width: 300px;
-
    background: var(--accent-color);
    box-shadow: var(--card-shadow);
    border-radius: 5px;
@@ -233,7 +242,6 @@ span {
 .back-link img {
    position: relative;
    padding-right: 10px;
-   top: 5px;
 }
 
 /* COUNTRY INFO */
@@ -283,6 +291,8 @@ span {
 
 .border-countries {
    margin-right: 16px;
+   position: relative;
+   top: 6px;
 }
 
 
