@@ -1,8 +1,9 @@
 let theme = document.getElementById('theme-mode')
-let n = 0
+let n = 1;
+
 function changeTheme() {
    if (n == 0) {
-      theme.innerHTML = 'Light Mode'
+      theme.innerHTML = 'Dark Mode'
       document.documentElement.style.setProperty('--text-color', '#111517')
       document.documentElement.style.setProperty('--search-color', '#848484')
       document.documentElement.style.setProperty('--accent-color', '#ffffff')
@@ -12,7 +13,7 @@ function changeTheme() {
       document.documentElement.style.setProperty('--card-shadow', '0px 0px 7px 2px rgba(0, 0, 0, 0.0294384)')
       n = 1
    } else {
-      theme.innerHTML = 'Dark Mode'
+      theme.innerHTML = 'Light Mode'
       document.documentElement.style.setProperty('--text-color', '#ffffff')
       document.documentElement.style.setProperty('--search-color', '#ffffff')
       document.documentElement.style.setProperty('--accent-color', '#2B3844')
@@ -22,5 +23,7 @@ function changeTheme() {
       document.documentElement.style.setProperty('--card-shadow', 'none')
       n = 0
    }
-   console.log("salom");
 }
+document.querySelector('.btn').addEventListener('click', () => {
+   changeTheme()
+})
